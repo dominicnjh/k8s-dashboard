@@ -20,11 +20,13 @@ This repo consists of k8s yaml files required to set up k8s dashboard in your cl
 kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 ```
 
+<br>
+
 # For On-Prem Users
 
-You are required to change the image field in the `recommended.yaml`. Below are the docker images required for this setup.
+You are required to change the image field in the `recommended.yaml`.
 
-## Required Docker Images
+Below are the docker images required for this setup:
 
 1. `kubernetesui/dashboard:v2.1.0`
 2. `kubernetesui/metrics-scraper:v1.0.6`
